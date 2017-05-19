@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>新建文件</title>
+    <meta charset="gb2312"/>
+
+    <script src="http://icon.xcar.com.cn/2014/muban/js/jquery-1.8.3.min.js"></script>
+    <script src="../src/core/contants.js"></script>
+    <script src="../src/core/plugins.js"></script>
+    <script src="../src/plugins/playpause.js"></script>
+    <script src="../src/plugins/fullscreen.js"></script>
+    <script src="../src/plugins/progress.js"></script>
+    <script src="../src/plugins/volume.js"></script>
+    <script src="../src/plugins/time.js"></script>
+    <script src="../src/plugins/source.js"></script>
+
+    <script src="../src/renderer/rendererManager.js"></script>
+    <script src="../src/renderer/html5.js"></script>
+    <script src="../src/renderer/flash.js"></script>
+
+
+
+    <script src="../src/XPlayer.js"></script>
+    <style>
+        .xplayer__time {
+            color: #fff;
+            display: block;
+            height: 24px;
+            width: auto;
+            font-weight: 700;
+            font-size: 11px;
+            padding: 16px 6px 0;
+            overflow: hidden;
+            text-align: center;
+            box-sizing: content-box;
+        }
+        .playpause_wrap{
+            width: 40px;
+            height: 40px;
+            background: red;
+            cursor: pointer;
+        }
+        .fullscreen_wrap{
+            width: 40px;
+            height: 40px;
+            background: red;
+            cursor: pointer;
+        }
+        .playpause_play{
+            background:green;
+        }
+        .xplayer__container{
+            background:#000;
+        }
+        .xplayer__fullscreen{
+            overflow: hidden !important;
+        }
+        .xplayer__container-fullscreen {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 4;
+        }
+        .xplayer__container-fullscreen object,
+        .xplayer__container-fullscreen embed,
+        .xplayer__container-fullscreen .xplayer__inner,
+        .xplayer__container-fullscreen .xplayer__media{
+            width:100% !important;
+            height:100% !important;
+        }
+        .xplayer___button{
+            float:left;
+        }
+        .xplayer__container-fullscreen .xplayer__controls{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .xplayer__controls{
+            height: 80px;
+            width: 100%;
+            background: #000;
+        }
+        .xplayer__progress{
+            width: 100%;
+            position: relative;
+            float:none;
+        }
+        .xplayer__progress-buffer,
+        .xplayer__progress-current,
+        .xplayer__progress-float,
+        .xplayer__progress-float-current,
+        .xplayer__progress-hovered,
+        .xplayer__progress-loaded,
+        .xplayer__progress-total,
+        .xplayer__progress-handle{
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            height: 10px;
+        }
+        .xplayer__progress-handle{
+            width: 10px;
+            border-radius: 30%;
+            background:#000000;
+        }
+        .xplayer__progress-total {
+            margin: 5px 0 0;
+            background: #333;
+            background: rgba(255,255,255,.3);
+            width: 100%;
+        }
+        .xplayer__progress-loaded {
+            width: 100%;
+            left: 0;
+            background: #fff;
+            opacity: .3;
+            filter:alpha(opacity=30);
+        }
+        .xplayer__progress-current,
+        .xplayer__progress-handle-content {
+            background: #fff;
+            filter:alpha(opacity=30);
+        }
+        .xplayer__progress-float-current{
+            position: absolute;
+            top: -30px;
+            background: #fff;
+            height: 20px;
+            padding:0 5px;
+            line-height: 20px;
+            margin-left: -50%;
+        }
+        .volume_wrap{
+            width: 40px;
+            height: 40px;
+            background:yellow;
+            position: relative;
+        }
+        .volume_wrap>button{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: none;
+            border: none;
+        }
+        .xplayer__volume-slider {
+            display: none;
+            height: 115px;
+            width: 25px;
+            background: rgba(50,50,50,.7);
+            border-radius: 0;
+            top: -115px;
+            left: 5px;
+            z-index: 100;
+            position: absolute;
+            margin: 0;
+        }
+        .xplayer__volume-total {
+            position: absolute;
+            left: 11px;
+            top: 8px;
+            width: 2px;
+            height: 100px;
+            background: hsla(0,0%,100%,.5);
+            margin: 0;
+        }
+        .xplayer__volume-current, .xplayer__volume-handle {
+            position: absolute;
+            left: 0;
+            background: hsla(0,0%,100%,.9);
+        }
+        .xplayer__volume-current {
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        .xplayer__volume-handle {
+            bottom: 100%;
+            width: 16px;
+            height: 6px;
+            margin: 0 0 -3px -7px;
+            cursor: ns-resize;
+            border-radius: 1px;
+        }
+        .xplayer__source-source-btn{
+            width: 40px;
+            height: 40px;
+            background:white;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div id="demo" style="width: 800px;height: 600px;margin:500px;"></div>
+<script>
+var player=new XPlayer('#demo',{
+    autoplay:true,
+    file:'http://vn.xcar.com.cn/xtv/qiniu/video/converted/m3u8/2017/05/09/hls_o_1bfmd59jijkdvmnnvt1lg912259_720p.m3u8',
+    loop:true,
+    preload:false,
+    source:[{
+        title:'高清',
+        src:'http://vn.xcar.com.cn/xtv/qiniu/video/converted/m3u8/2017/05/09/hls_o_1bfmd59jijkdvmnnvt1lg912259_720p.m3u8'
+    },
+        {title:'标清',
+        src:'http://vn.xcar.com.cn/xtv/qiniu/video/converted/m3u8/2017/05/09/hls_o_1bfmd59jijkdvmnnvt1lg912259_576p.m3u8'},
+        {title:'流畅',
+        src:'http://vn.xcar.com.cn/xtv/qiniu/video/converted/m3u8/2017/05/09/hls_o_1bfmd59jijkdvmnnvt1lg912259_360p.m3u8'
+        }]
+})
+</script>
+</body>
+</html>
