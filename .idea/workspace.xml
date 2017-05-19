@@ -57,7 +57,7 @@
       <file leaf-file-name="XPlayer.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/XPlayer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="739" selection-end="739" vertical-scroll-proportion="-16.2" vertical-offset="0" max-vertical-offset="5994">
+            <state line="4" column="17" selection-start="71" selection-end="71" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="5994">
               <folding />
             </state>
           </provider>
@@ -66,7 +66,7 @@
       <file leaf-file-name="rendererManager.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/rendererManager.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="21" selection-start="345" selection-end="345" vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="1134">
+            <state line="4" column="4" selection-start="58" selection-end="58" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="1161">
               <folding />
             </state>
           </provider>
@@ -75,7 +75,7 @@
       <file leaf-file-name="html5_test.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/html5_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="23" selection-start="53" selection-end="53" vertical-scroll-proportion="-2.7" vertical-offset="0" max-vertical-offset="729">
+            <state line="4" column="17" selection-start="71" selection-end="71" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="729">
               <folding />
             </state>
           </provider>
@@ -84,7 +84,7 @@
       <file leaf-file-name="flash_test.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/flash_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="21" selection-start="225" selection-end="225" vertical-scroll-proportion="0.23225807" vertical-offset="0" max-vertical-offset="930">
+            <state line="4" column="17" selection-start="71" selection-end="71" vertical-scroll-proportion="0.11612903" vertical-offset="0" max-vertical-offset="930">
               <folding />
             </state>
           </provider>
@@ -100,10 +100,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/demo/XPlayer.html" />
-        <option value="$PROJECT_DIR$/demo/rendererManager.html" />
-        <option value="$PROJECT_DIR$/demo/html5_test.html" />
         <option value="$PROJECT_DIR$/demo/flash_test.html" />
+        <option value="$PROJECT_DIR$/demo/html5_test.html" />
+        <option value="$PROJECT_DIR$/demo/rendererManager.html" />
+        <option value="$PROJECT_DIR$/demo/XPlayer.html" />
       </list>
     </option>
   </component>
@@ -286,28 +286,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/XPlayer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="739" selection-end="739" vertical-scroll-proportion="-16.2" vertical-offset="0" max-vertical-offset="5994">
+        <state line="4" column="17" selection-start="71" selection-end="71" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="5994">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/rendererManager.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="345" selection-end="345" vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="1134">
+        <state line="4" column="4" selection-start="58" selection-end="58" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="1161">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/html5_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="23" selection-start="53" selection-end="53" vertical-scroll-proportion="-2.7" vertical-offset="0" max-vertical-offset="729">
+        <state line="4" column="17" selection-start="71" selection-end="71" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="729">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/flash_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="225" selection-end="225" vertical-scroll-proportion="0.23225807" vertical-offset="0" max-vertical-offset="930">
+        <state line="4" column="17" selection-start="71" selection-end="71" vertical-scroll-proportion="0.11612903" vertical-offset="0" max-vertical-offset="930">
           <folding />
         </state>
       </provider>
